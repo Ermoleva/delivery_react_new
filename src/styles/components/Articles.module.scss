@@ -1,0 +1,150 @@
+.articles {
+  margin-bottom: 120px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 35px 15px;
+  }
+
+  &__item {
+    margin: 0 auto;
+    height: 285px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__img {
+    height: 190px;
+  }
+
+  &__title {
+    font-family: "Comfortaa";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    color: #020202;
+    width: 260px;
+    padding-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__date {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 133.8%;
+    color: #b5c2ce;
+  }
+
+  &__btn {
+    width: 149px;
+    height: 35px;
+    border: 1.5px solid #64d370;
+    border-radius: 190px;
+    background-color: transparent;
+    text-align: left;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 20px;
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 133.8%;
+    color: #64d370;
+    position: relative;
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../images/arrow_next.svg");
+      width: 9px;
+      height: 16px;
+      top: 9px;
+      right: 18px;
+    }
+  }
+
+  .container {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .articles {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .articles__items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .articles {
+    margin-bottom: 90px;
+
+    .container {
+      width: 97%;
+      padding: 0;
+    }
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+    &__item {
+      width: 90%;
+    }
+    &__title {
+      font-size: 14px;
+      width: 90%;
+    }
+    &__btn {
+      width: 110px;
+      padding-left: 12px;
+
+      &::after {
+        right: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .articles__item {
+    height: 263px;
+  }
+}
+@media (max-width: 700px){
+  .articles {
+    &__info {
+      align-items: center;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .articles {
+    margin-bottom: 70px;
+
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      height: auto;
+    }
+  }
+}

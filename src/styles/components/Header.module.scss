@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat:wght@300;400;500;700&display=swap');
+
+.header {
+  flex: 0 0 auto;
+  width: 1235px;
+  margin: 0 auto;
+  background-color: transparent;
+  transition: all 0.5s ease-out;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition-duration: 0s;
+  z-index: 1;
+
+  &__links {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__link {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 133.8%;
+    color: #020202;
+    outline: none;
+    text-decoration: none;
+    padding-right: 40px;
+  }
+
+  &__links_items {
+    margin: 52px 50px 0 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.5s ease-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -40%;
+      width: 880px;
+      height: 52px;
+      background: #f5faff;
+      box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+      border-radius: 190px;
+      z-index: -1;
+    }
+  }
+
+  &__links_wrapp {
+    display: flex;
+  }
+
+  &__logo {
+    margin-top: -47px;
+    width: 264px;
+    height: 264px;
+    border-radius: 50%;
+    background: #f5faff;
+    box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+  }
+
+  &__call_icon {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+    margin-right: 20px;
+    width: 25px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: #f5faff;
+      box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      top: -22px;
+      right: -20px;
+      z-index: -1;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      background: #020202;
+      border-radius: 2px;
+      height: 4px;
+      opacity: 1;
+      right: 0;
+      transform: rotate(0deg);
+      transition: 0.25s ease-in-out;
+    }
+
+    span:nth-child(1) {
+      width: 25px;
+      top: 0px;
+    }
+
+    span:nth-child(2) {
+      width: 20px;
+      top: 8px;
+    }
+
+    span:nth-child(3) {
+      width: 25px;
+      top: 17px;
+    }
+
+
+  }
+
+  .hamburger_active span:nth-child(1) {
+    top: 9px;
+    transform: rotate(135deg);
+  }
+
+  .hamburger_active span:nth-child(2) {
+    opacity: 0;
+    bottom: -30px;
+  }
+
+  .hamburger_active span:nth-child(3) {
+    top: 9px;
+    transform: rotate(-135deg);
+  }
+
+  &__number {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Montserrat";
+    color: #64d370;
+    text-align: center;
+
+  }
+
+  &__call {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 13px 29px;
+    background: #f5faff;
+    box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+    border-radius: 190px;
+
+  }
+
+  &__call-icon {
+    display: none;
+  }
+
+  &__phone {
+    margin-top: 38px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header {
+    width: 95%;
+
+    &__logo {
+      width: 200px;
+      height: 200px;
+      margin-top: -35px;
+
+    }
+
+    &__link {
+      padding-right: 20px;
+    }
+
+    &__links_items {
+      &::before {
+        width: 600px;
+        left: -17%;
+      }
+    }
+
+    &__links_wrapp {
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    &__number {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .header {
+    &__logo {
+      width: 160px;
+      height: 170px;
+      margin-top: -35px;
+
+    }
+
+    &__link {
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    &__links_items {
+      margin-right: 20px;
+
+      &::before {
+        width: 550px;
+        height: 42px;
+        left: -20%;
+        top: -14px;
+      }
+    }
+
+    &__call {
+      padding: 9px 15px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    &__logo {
+      width: 140px;
+      height: 140px;
+      margin-top: -25px;
+
+    }
+    &__number_text {
+      display: none;
+    }
+    &__phone{
+      margin-top: 30px;
+    }
+    &__call{
+      padding: 15px 18px;
+    }
+    &__call_icon {
+      display: block;
+      width: 27.19px;
+      height: auto;
+
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    width: 95%;
+
+    &_br {
+      z-index: 2;
+    }
+
+    &__links {
+      &::before {
+        display: none;
+      }
+    }
+
+    &__links_items {
+      position: fixed;
+      top: -100%;
+      flex-direction: column;
+      padding-left: 33px;
+    }
+    &__links_wrapp{
+      width: 40%;
+    }
+
+    &__logo {
+      width: 180px;
+      height: 180px;
+      margin-top: -35px;
+
+    }
+    &__link + &__link {
+      margin-top: 21px;
+    }
+
+    &__link {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+
+
+    &__call {
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: #f5faff;
+      box-shadow: 0px 0px 40px rgba(86, 86, 86, 0.3);
+
+    }
+
+    .hamburger {
+      position: fixed;
+      right: 10px;
+      top: 50px;
+      display: block;
+      z-index: 2;
+    }
+  }
+
+  .header__hide {
+    z-index: 2;
+    background: rgba(2, 2, 2, 0.85);
+    transition-duration: 0s;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+
+    .header__logo_link {
+      display: none;
+    }
+
+    .header__links_wrapp {
+      flex-direction: column;
+      background: #F5FAFF;
+      border-radius: 0px 0px 50px 50px;
+      width: 100%;
+    }
+
+    .header__links_items {
+      margin: 0 auto;
+      height: 337px;
+      width: 100vh;
+      margin-top: 40px;
+      top: 0;
+      transition: all 0.5s;
+      position: relative;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .header__call_icon {
+      display: none;
+    }
+
+    .header__number_text {
+      display: block;
+    }
+
+    .header__phone {
+      position: relative;
+      height: auto;
+      margin: 0 auto 20px;
+    }
+
+    .header__call {
+      padding: 12px 41px;
+      background: #64D370;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      margin-top: 30px;
+    }
+
+    .header__number {
+      font-size: 18px;
+      color: #F5FAFF;
+    }
+    .header__link{
+      font-family: 'Comfortaa';
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 133.8%;
+    }
+  }
+}
+@media (max-width: 550px){
+  .header{
+    &__logo{
+      width: 140px;
+      height: 140px;
+      margin-top: -25px;
+    }
+    &__links_wrapp{
+      width: auto;
+      margin-right: 80px;
+    }
+    //.hamburger{
+    //  right: 35px;
+    //}
+  }
+}

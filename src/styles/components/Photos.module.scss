@@ -1,0 +1,129 @@
+.photos {
+  margin-top: 120px;
+  position: relative;
+  //&::before {
+  //  content: "";
+  //  position: absolute;
+  //  top: -50px;
+  //  right: 520px;
+  //  width: 184.34px;
+  //  height: 184.34px;
+  //  border: 15px solid rgba(38, 240, 58, 0.1);
+  //  border-radius: 50%;
+  //  z-index: -2;
+  //}
+  //
+  //&::after {
+  //  content: "";
+  //  position: absolute;
+  //  bottom: -200px;
+  //  right: -150px;
+  //  width: 519.49px;
+  //  height: 519.49px;
+  //  border: 30px solid rgba(38, 240, 58, 0.1);
+  //  border-radius: 50%;
+  //  z-index: -2;
+  //}
+
+  :global(.slick-slider),
+  :global(.slick-list),
+  :global(.slick-track),
+  :global(.slick-slide),
+  :global(.slick-slide > div),
+  :global(.slick-slide img) {
+    outline: none !important;
+  }
+
+  :global(.slick-slide:focus),
+  :global(.slick-slide > div:focus),
+  :global(.slick-slide img:focus),
+  :global(.slick-current:focus),
+  :global(.slick-current > div:focus),
+  :global(.slick-current img:focus),
+  :global(.slick-active:focus),
+  :global(.slick-active > div:focus),
+  :global(.slick-active img:focus) {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  :global(.slick-slide) {
+    margin: 0;
+  }
+
+  &__img {
+    width: 380px !important;
+    height: 570px;
+    outline: none;
+    border: none;
+  }
+
+  &__title {
+    font-family: "Comfortaa";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 33px;
+    text-align: center;
+    color: #020202;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1700px) {
+  .photos__img {
+    width: 289px !important;
+    height: 433px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .photos::before {
+    display: none;
+  }
+  .photos__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 20px;
+    color: #020202;
+
+  }
+
+}
+
+@media (max-width: 1000px) {
+  .photos__img {
+    width: 202px !important;
+    height: 303px;
+  }
+}
+
+@media (max-width: 800px) {
+  .photos {
+    margin-top: 70px;
+  }
+  .photos__img {
+    width: 167px !important;
+    height: 250px;
+  }
+  .photos__title {
+    padding-bottom: 20px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 530px) {
+  .photos__img {
+    width: 105px !important;
+    height: 157px;
+  }
+  .photos {
+    margin-top: 50px;
+    &__title{
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}

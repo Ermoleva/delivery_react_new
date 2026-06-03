@@ -1,0 +1,230 @@
+@import "components/Tabs.module.css";
+
+
+body{
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.content{
+    flex: 1 0 auto;
+    flex-grow: 1;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 0;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    background-color: white;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.header nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.header nav ul li {
+    display: inline-block;
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/*.css-tj5bde-Svg {*/
+/*    transform: rotate(275deg);*/
+/*}*/
+
+/*.css-1s2u09g-control {*/
+/*    background: #F5FAFF;*/
+
+/*    border-radius: 190px !important;*/
+
+/*}*/
+/*.css-6j8wv5-Input{*/
+/*    margin: 0 !important;*/
+/*    padding: 0 !important;*/
+/*}*/
+/*.css-319lph-ValueContainer{*/
+/*    box-sizing: border-box !important;*/
+/*    padding: 9px 20px !important;*/
+/*}*/
+/*.css-1s2u09g-control:hover {*/
+/*    border-radius: 190px !important;*/
+/*}*/
+/*.css-1pahdxg-control{*/
+/*    border-radius: 190px !important;*/
+/*    border: none !important;*/
+/*    box-shadow: none !important;*/
+/*}*/
+/*.css-1pahdxg-control:hover {*/
+/*    border-radius: 190px !important;*/
+/*    border: none !important;*/
+/*    box-shadow: none !important;*/
+/*}*/
+
+.modal__select__control {
+    width: 580px;
+    margin-bottom: 20px;
+    background: #F5FAFF;
+    border-radius: 190px !important;
+    border: none !important;
+    box-shadow: none !important;
+
+}
+.modal__select__control--menu-is-open {
+    width: 580px;
+    border-radius: 20px 20px 0 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    background: #64D370;
+    color: #F5FAFF;
+
+}
+.modal__select__control--menu-is-open .modal__select__input-container{
+    background: #64D370 !important;
+    color: #F5FAFF !important;
+}
+.modal__select__placeholder{
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+.modal__select__input-container::placeholder{
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.modal__select__control--menu-is-open .modal__select__placeholder{
+    color: #fff !important;
+    z-index: 1;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.modal__select__input::placeholder {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133.8%;
+    color: #020202;
+
+
+}
+.modal__select__input-container{
+    color: #fff !important; ;
+}
+.modal__select__indicator {
+    cursor: pointer;
+}
+.modal__select__single-value{
+    background-color: #fff !important;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133.8%;
+    color: #020202 !important;
+}
+.modal__select__control--menu-is-open .modal__select__single-value{
+    z-index: 2;
+    color: #fff !important;
+    background-color: #64D370 !important;
+}
+.modal__select__value-container{
+    box-sizing: border-box;
+    padding: 6.5px 20px !important;
+    color: #fff !important;
+
+}
+.modal__select__control--menu-is-open {
+    background: #64D370 !important;
+}
+.modal__select__control--menu-is-open .modal__select__control{
+    background: #64D370;
+}
+.modal__select__option {
+    cursor: pointer !important;
+    background: #64D370 !important;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133.8%;
+    color: #fff !important;
+}
+
+.modal__select__option--is-focused{
+    cursor: pointer !important;
+
+}
+.modal__select__menu{
+    border-radius: 0 0 20px 20px !important;
+    margin: 0 !important;
+    background: #64D370 !important;
+}
+.modal__select__menu-list{
+    border-radius: 20px !important;
+    color: #fff !important;
+}
+.modal__select__menu_portal{
+    color: #fff !important;
+}
+
+@media (max-width: 1275px){
+    .modal__select__control{
+        width: 100%;
+    }
+    .modal__select__single-value{
+        font-size: 14px;
+    }
+}
