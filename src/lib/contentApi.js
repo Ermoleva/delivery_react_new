@@ -1,4 +1,14 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+function getApiBase() {
+  if (typeof window === "undefined") {
+    return (
+      process.env.API_INTERNAL_URL ||
+      process.env.NEXT_PUBLIC_API_URL ||
+      "http://localhost:4000"
+    );
+  }
+
+  return process.env.NEXT_PUBLIC_API_URL || "";
+}
 
 export function getAssetUrl(value) {
   if (!value || typeof value !== "string") {
@@ -9,7 +19,7 @@ export function getAssetUrl(value) {
     return value;
   }
 
-  return `${API_BASE}${value}`;
+  return `${getApiBase()}${value}`;
 }
 
 function normalizeAssetUrls(value) {
@@ -34,7 +44,7 @@ export function getArticleHref(slug) {
 }
 
 export async function fetchJson(path) {
-  const response = await fetch(`${API_BASE}${path}`);
+  const response = await fetch(`${getApiBase()}${path}`);
 
   if (!response.ok) {
     throw new Error(`Request failed: ${response.status}`);
@@ -60,7 +70,7 @@ export async function fetchArticle(slug) {
 }
 
 export async function createOrder(payload) {
-  const response = await fetch(`${API_BASE}/api/orders`, {
+  const response = await fetch(`${getApiBase()}/api/orders`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
