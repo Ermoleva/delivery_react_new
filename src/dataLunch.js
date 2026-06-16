@@ -1,7 +1,7 @@
 const lunch = [
     {
         id: 1,
-        img: '../../images/lunch-img.png',
+        img: '/images/lunch-img.png',
         title: 'Бізнес-ланч “Рибний"',
         weight: "250",
         calories: "346",
@@ -14,7 +14,7 @@ const lunch = [
     },
     {
         id: 2,
-        img: '../../images/lunch-img2.png',
+        img: '/images/lunch-img2.png',
         title: 'Бізнес-ланч “М’ясний”',
         weight: "250",
         calories: "346",
@@ -27,7 +27,7 @@ const lunch = [
     },
     {
         id: 3,
-        img: '../../images/lunch-img.png',
+        img: '/images/lunch-img.png',
         title: 'Бізнес-ланч “Рибний"',
         weight: "250",
         calories: "346",
@@ -40,7 +40,7 @@ const lunch = [
     },
     {
         id: 4,
-        img: '../../images/lunch-img2.png',
+        img: '/images/lunch-img2.png',
         title: 'Бізнес-ланч “М’ясний”',
         weight: "250",
         calories: "346",
@@ -53,7 +53,7 @@ const lunch = [
     },
     {
         id: 5,
-        img: '../../images/lunch-img.png',
+        img: '/images/lunch-img.png',
         title: 'Бізнес-ланч “Рибний"',
         weight: "250",
         calories: "346",
@@ -66,7 +66,7 @@ const lunch = [
     },
     {
         id: 6,
-        img: '../../images/lunch-img2.png',
+        img: '/images/lunch-img2.png',
         title: 'Бізнес-ланч “М’ясний”',
         weight: "250",
         calories: "346",

@@ -52,6 +52,10 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    &_img{
+      width: 423px;
+    height: 175px;
+    }
   }
   &__logo_text {
     font-family: "Comfortaa";

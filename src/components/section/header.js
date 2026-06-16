@@ -17,7 +17,7 @@ export default function Header() {
             <div className={styles.header__logo_link}>
 
                 <Image src={Logo}
-                       alt="GastroChef" width={124} height={56} layout={'raw'} className={styles.header__logo}/>
+                       alt="RatoChef" width={124} height={56} layout={'raw'} className={styles.header__logo}/>
 
             </div>
             <div className={styles.header__links_wrapp}>
@@ -29,7 +29,7 @@ export default function Header() {
                         <a href="src/components/section/header#" className={styles.header__link}>Бізнес-ланчі</a>
                     </Link>
                     <Link href="/shop">
-                        <a href="src/components/section/header#" className={styles.header__link}>Gastro Shop</a>
+                        <a href="src/components/section/header#" className={styles.header__link}>Rato Shop</a>
                     </Link>
                     <Link href="/about">
                         <a href="src/components/section/header#" className={styles.header__link}>О нас</a>
@@ -44,7 +44,7 @@ export default function Header() {
                         <a href="tel:+380689494919" className={styles.header__number}>
                             <p className={styles.header__number_text}>+38 (068) 949 - 49 -19</p>
                             <Image src={Phone}
-                                   alt="GastroChef" width={124} height={56} layout={'raw'}
+                                   alt="RatoChef" width={124} height={56} layout={'raw'}
                                    className={styles.header__call_icon}/>
                         </a>
                     </div>

@@ -17,7 +17,7 @@ export default function Footer() {
                         <a href="src/components/section/footer#" className={styles.footer__link}>Прогами харчування</a>
                         <a href="src/components/section/footer#" className={styles.footer__link}>О нас</a>
                         <a href="src/components/section/footer#" className={styles.footer__link}>Бізнес-ланчі</a>
-                        <a href="src/components/section/footer#" className={styles.footer__link}>Gastro Shop</a>
+                        <a href="src/components/section/footer#" className={styles.footer__link}>Rato Shop</a>
                         <a href="src/components/section/footer#" className={styles.footer__link}>Блог</a>
                     </div>
                     <div className={styles.footer__logo}>

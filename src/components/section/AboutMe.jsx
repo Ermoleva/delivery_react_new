@@ -14,7 +14,7 @@ export default function AboutMe() {
         <div className={styles.about__info}>
           <h2 className={styles.about__info_title}>
             Здрастуйте! Мене звуть <span>Кобилинський Кирило</span>, і я є {" "}
-            <span>засновником GastroChef.</span>
+            <span>засновником RatoChef.</span>
           </h2>
 
           {aboutParagraphs.map((paragraph) => (
@@ -24,13 +24,13 @@ export default function AboutMe() {
           ))}
 
           <h3 className={styles.about__info_subtitle}>
-            І я хочу Вам розповісти більше про GastroChef.
+            І я хочу Вам розповісти більше про RatoChef.
           </h3>
         </div>
 
         <Image
           src={image}
-          alt="Основатель GastroChef"
+          alt="Основатель RatoChef"
           layout="raw"
           className={styles.about__img}
         />

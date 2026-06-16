@@ -9,18 +9,18 @@ const socialLinks = [
     id: "instagram",
     href: "#",
     icon: inst,
-    label: "Instagram GastroChef",
+    label: "Instagram RatoChef",
   },
   {
     id: "facebook",
     href: "#",
     icon: facebook,
-    label: "Facebook GastroChef",
+    label: "Facebook RatoChef",
   },
 ];
 
 const infoParagraphs = [
-  "GastroChef - правильне харчування з доставкою додому, створене, щоб полегшити життя, звільнити час від готування, зайвих перекусів і фастфуду та дати можливість почуватися легко, повним енергії й сил для нових звершень і перемог.",
+  "RatoChef - правильне харчування з доставкою додому, створене, щоб полегшити життя, звільнити час від готування, зайвих перекусів і фастфуду та дати можливість почуватися легко, повним енергії й сил для нових звершень і перемог.",
   "Усі продукти для приготування правильного харчування закуповуються тільки з сертифікатами, а раціони готуються на сучасній і безпечній кухні вночі перед приїздом до вас!",
 ];
 
@@ -28,7 +28,7 @@ export default function Info() {
   return (
     <section className={styles.info}>
       <div className={styles.info__wrapp}>
-        <h2 className={styles.info__title}>«GastroChef – легко для зайнятих»</h2>
+        <h2 className={styles.info__title}>«RatoChef – легко для зайнятих»</h2>
 
         {infoParagraphs.map((paragraph) => (
           <p key={paragraph} className={styles.info__text}>
@@ -70,7 +70,7 @@ export default function Info() {
 
       <Image
         src={info}
-        alt="Інформація про GastroChef"
+        alt="Інформація про RatoChef"
         layout="raw"
         className={styles.info__img}
       />

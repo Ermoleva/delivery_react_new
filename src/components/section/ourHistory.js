@@ -16,14 +16,14 @@ export default function OurHistory() {
       <section className={styles.history}>
         <Image
           src={history}
-          alt="История GastroChef"
+          alt="История RatoChef"
           layout="raw"
           className={styles.history__img}
         />
 
         <div className={styles.history__info}>
           <h2 className={styles.history__info_title}>
-            Історія GastroChef почалася понад 6 років тому...
+            Історія RatoChef почалася понад 6 років тому...
           </h2>
 
           {historyParagraphs.map((paragraph) => (
@@ -33,7 +33,7 @@ export default function OurHistory() {
           ))}
 
           <h3 className={styles.history__info_subtitle}>
-            Знайомтеся! Команда GastroChef!
+            Знайомтеся! Команда RatoChef!
           </h3>
         </div>
       </section>
@@ -41,7 +41,7 @@ export default function OurHistory() {
       <section className={styles.photo}>
         <Image
           src={photo}
-          alt="Команда GastroChef"
+          alt="Команда RatoChef"
           layout="raw"
           className={styles.photo__img}
         />

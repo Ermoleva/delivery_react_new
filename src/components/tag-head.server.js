@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
 const SITE_HOME = '/';
-const SITE_TITLE = 'GastroChef';
-const SITE_DESCRIPTION = 'GastroChef - сервіс правильного харчування з доставкою додому.';
+const SITE_TITLE = 'RatoChef';
+const SITE_DESCRIPTION = 'RatoChef - сервіс правильного харчування з доставкою додому.';
 
 export default function TagHead ({title}) {
     return (
@@ -16,7 +16,7 @@ export default function TagHead ({title}) {
             <meta property="og:title" content={SITE_TITLE}/>
             <meta property="og:description" content={SITE_DESCRIPTION}/>
             <meta property="og:url" content={SITE_HOME}/>
-            <meta property="og:site_name" content="GastroChef"/>
+            <meta property="og:site_name" content="RatoChef"/>
             <meta property="og:type" content="website"/>
             <meta property="og:image" content="/logotype.png"/>
             {/* <meta property="og:image:width" content="2500"/> */}
@@ -25,8 +25,8 @@ export default function TagHead ({title}) {
             <meta name="twitter:title" content={SITE_TITLE}/>
             <meta name="twitter:description" content={SITE_DESCRIPTION}/>
             <meta name="twitter:image" content="/logotype.png"/>
-            <meta name="fb_admins_meta_tag" content="GastroChef"/>
-            <meta property="fb:admins" content="GastroChef"/>
+            <meta name="fb_admins_meta_tag" content="RatoChef"/>
+            <meta property="fb:admins" content="RatoChef"/>
         </Head>
     );
 }
