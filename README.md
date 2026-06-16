@@ -29,7 +29,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on DigitalOcean
 
-root dir: `/var/www/it2school`
+root dir: `/var/www/gastrochef`
 
 `pm2 ps` check nextjs server status 
 

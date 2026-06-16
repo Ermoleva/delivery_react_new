@@ -17,7 +17,7 @@ export default function Header() {
             <div className={styles.header__logo_link}>
 
                 <Image src={Logo}
-                       alt="IT2School" width={124} height={56} layout={'raw'} className={styles.header__logo}/>
+                       alt="GastroChef" width={124} height={56} layout={'raw'} className={styles.header__logo}/>
 
             </div>
             <div className={styles.header__links_wrapp}>
@@ -44,7 +44,7 @@ export default function Header() {
                         <a href="tel:+380689494919" className={styles.header__number}>
                             <p className={styles.header__number_text}>+38 (068) 949 - 49 -19</p>
                             <Image src={Phone}
-                                   alt="IT2School" width={124} height={56} layout={'raw'}
+                                   alt="GastroChef" width={124} height={56} layout={'raw'}
                                    className={styles.header__call_icon}/>
                         </a>
                     </div>
