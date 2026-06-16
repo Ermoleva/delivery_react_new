@@ -13,7 +13,7 @@ export default function AboutMe() {
       <div className={styles.container}>
         <div className={styles.about__info}>
           <h2 className={styles.about__info_title}>
-            Здрастуйте! Мене звуть <span>Кобилинський Кирило</span>, і я є {" "}
+            Вітаю! Мене звуть <span>Іванов Іван</span>, і я є {" "}
             <span>засновником RatoChef.</span>
           </h2>
 

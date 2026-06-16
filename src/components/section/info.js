@@ -42,7 +42,7 @@ export default function Info() {
         </p>
 
         <h3 className={styles.info__subtitle}>
-          З повагою, Кобилинський Кирило.
+          З повагою, Іванов Іван.
         </h3>
 
         <div className={styles.info__social}>
