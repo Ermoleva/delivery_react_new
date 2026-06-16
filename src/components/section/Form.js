@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createOrder } from "../../lib/contentApi";
 import styles from "../../styles/components/Form.module.scss";
 import Accordion from "./Accordion";
 
@@ -13,6 +14,7 @@ export default function Form() {
   const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   function handleChange(event) {
     const { name, value, type, checked } = event.target;
@@ -28,7 +30,7 @@ export default function Form() {
     }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     const nextErrors = {
@@ -44,7 +46,42 @@ export default function Form() {
       return;
     }
 
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const trialDayText = formData.trialDay
+        ? "Тест-день: так, отримати знижку -30%"
+        : "Тест-день: ні";
+
+      await createOrder({
+        orderType: "program",
+        customer: {
+          name: formData.name,
+          phone: formData.phone,
+          comment: trialDayText,
+        },
+        items: [
+          {
+            title: `Заявка з форми. ${trialDayText}`,
+            quantity: 1,
+            unitPrice: 0,
+            totalPrice: 0,
+          },
+        ],
+      });
+
+      setFormData(initialFormData);
+      setErrors({});
+      setIsSubmitted(true);
+    } catch (requestError) {
+      setErrors((currentErrors) => ({
+        ...currentErrors,
+        submit: requestError.message,
+      }));
+      setIsSubmitted(false);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -136,9 +173,13 @@ export default function Form() {
           </p>
         ) : null}
 
+        {errors.submit ? (
+          <p className={styles.back__form_error}>{errors.submit}</p>
+        ) : null}
+
         {isSubmitted ? (
           <p className={styles.back__form_success}>
-            Дані заповнені. Тепер можна продовжити оформлення замовлення.
+            Замовлення прийнято. Ми скоро зв'яжемося з вами.
           </p>
         ) : null}
 
@@ -148,8 +189,12 @@ export default function Form() {
 
         <p className={styles.back__form_order_p}>АБО</p>
 
-        <button className={styles.back__form_order_onl} type="submit">
-          Онлайн-замовлення
+        <button
+          className={styles.back__form_order_onl}
+          type="submit"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "Відправляємо..." : "Онлайн-замовлення"}
         </button>
       </form>
       <Accordion />

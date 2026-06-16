@@ -1,5 +1,31 @@
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
+export function getAssetUrl(value) {
+  if (!value || typeof value !== "string") {
+    return value;
+  }
+
+  if (/^https?:\/\//i.test(value) || !value.startsWith("/uploads/")) {
+    return value;
+  }
+
+  return `${API_BASE}${value}`;
+}
+
+function normalizeAssetUrls(value) {
+  if (Array.isArray(value)) {
+    return value.map(normalizeAssetUrls);
+  }
+
+  if (!value || typeof value !== "object") {
+    return getAssetUrl(value);
+  }
+
+  return Object.fromEntries(
+    Object.entries(value).map(([key, entry]) => [key, normalizeAssetUrls(entry)])
+  );
+}
+
 export function getArticleHref(slug) {
   return {
     pathname: "/article",
@@ -18,7 +44,7 @@ export async function fetchJson(path) {
 }
 
 export async function fetchContent(resource) {
-  return fetchJson(`/api/content/${resource}`);
+  return normalizeAssetUrls(await fetchJson(`/api/content/${resource}`));
 }
 
 export async function fetchPrograms() {
@@ -26,11 +52,11 @@ export async function fetchPrograms() {
 }
 
 export async function fetchArticles() {
-  return fetchJson("/api/articles");
+  return normalizeAssetUrls(await fetchJson("/api/articles"));
 }
 
 export async function fetchArticle(slug) {
-  return fetchJson(`/api/articles/${slug}`);
+  return normalizeAssetUrls(await fetchJson(`/api/articles/${slug}`));
 }
 
 export async function createOrder(payload) {

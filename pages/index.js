@@ -29,6 +29,6 @@ export async function getServerSideProps() {
 
         return { props: { slides, advantages, programs, gallery } };
     } catch (error) {
-        return { props: { slides: undefined, advantages: undefined, programs: undefined, gallery: undefined } };
+        return { props: {} };
     }
 }
